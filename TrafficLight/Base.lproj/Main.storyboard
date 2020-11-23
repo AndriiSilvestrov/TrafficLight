@@ -19,46 +19,46 @@
                                 <rect key="frame" x="127.5" y="40" width="120" height="120"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="eKS-Re-Yhw"/>
-                                    <constraint firstAttribute="width" constant="120" id="hac-bG-0Xl"/>
+                                    <constraint firstAttribute="width" secondItem="tcy-hC-DTd" secondAttribute="height" multiplier="1:1" id="fGI-vT-DL4"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMJ-X0-T02">
                                 <rect key="frame" x="127.5" y="190" width="120" height="120"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="8Hr-iJ-y7j"/>
-                                    <constraint firstAttribute="width" constant="120" id="ip2-Hr-lKT"/>
+                                    <constraint firstAttribute="width" secondItem="QMJ-X0-T02" secondAttribute="height" multiplier="1:1" id="WWg-qE-Ttv"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Km6-hC-bX9">
                                 <rect key="frame" x="127.5" y="340" width="120" height="120"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="M6l-1a-XGg"/>
-                                    <constraint firstAttribute="height" constant="120" id="dvJ-Zm-hdS"/>
+                                    <constraint firstAttribute="width" secondItem="Km6-hC-bX9" secondAttribute="height" multiplier="1:1" id="HeN-5i-R3h"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhy-AY-fXI">
-                                <rect key="frame" x="127.5" y="507" width="120" height="120"/>
+                                <rect key="frame" x="127.5" y="567" width="120" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="YbX-yK-eqQ"/>
-                                    <constraint firstAttribute="height" constant="120" id="hTQ-ES-0Te"/>
+                                    <constraint firstAttribute="width" secondItem="bhy-AY-fXI" secondAttribute="height" multiplier="2:1" id="7jB-GI-pjj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="START"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bhy-AY-fXI" secondAttribute="bottom" constant="40" id="5Dn-5B-lgA"/>
                             <constraint firstItem="tcy-hC-DTd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Mru-h3-CsM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bhy-AY-fXI" secondAttribute="bottom" constant="40" id="V8Y-zQ-2KB"/>
+                            <constraint firstItem="bhy-AY-fXI" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.089955" id="PzO-5j-lGx"/>
+                            <constraint firstItem="QMJ-X0-T02" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="120:667" id="SmL-uI-yDV"/>
                             <constraint firstItem="bhy-AY-fXI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="anX-GL-9yk"/>
+                            <constraint firstItem="tcy-hC-DTd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="120:667" id="fKA-wR-Jkm"/>
                             <constraint firstItem="Km6-hC-bX9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hLh-NS-ZtL"/>
                             <constraint firstItem="QMJ-X0-T02" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="inW-gj-7kl"/>
                             <constraint firstItem="tcy-hC-DTd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uuN-pz-Ytu"/>
+                            <constraint firstItem="Km6-hC-bX9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="120:667" id="vi7-sB-ErT"/>
                             <constraint firstItem="Km6-hC-bX9" firstAttribute="top" secondItem="QMJ-X0-T02" secondAttribute="bottom" constant="30" id="xYI-ov-RdL"/>
                             <constraint firstItem="QMJ-X0-T02" firstAttribute="top" secondItem="tcy-hC-DTd" secondAttribute="bottom" constant="30" id="yNa-FO-nA7"/>
                         </constraints>
