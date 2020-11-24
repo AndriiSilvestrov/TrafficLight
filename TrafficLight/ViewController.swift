@@ -8,41 +8,67 @@
 
 import UIKit
 
+enum TrafficLightColors {
+    case red
+    case yellow
+    case green
+    case none
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet var redColor: UIView!
     @IBOutlet var yellowColor: UIView!
     @IBOutlet var greenColor: UIView!
-    @IBOutlet var actionButton: UIButton!
+    
+    @IBOutlet var colorChangeButton: UIButton!
+    
+    private var currentColor = TrafficLightColors.none
+    
+    private let lightOn: CGFloat = 1
+    private let lightOff: CGFloat = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        redColor.alpha = 0.3
-        redColor.layer.cornerRadius = 60
-        yellowColor.alpha = 0.3
-        yellowColor.layer.cornerRadius = 60
-        greenColor.alpha = 0.3
-        greenColor.layer.cornerRadius = 60
-        actionButton.layer.cornerRadius = 60
-        actionButton.layer.borderWidth = 1.5
-        actionButton.layer.borderColor = UIColor.systemBlue.cgColor
-        actionButton.clipsToBounds = true
         
+        redColor.alpha = lightOff
+        yellowColor.alpha = lightOff
+        greenColor.alpha = lightOff
+                
+    }
+    
+    override func viewWillLayoutSubviews() {
+        redColor.layer.cornerRadius = redColor.frame.width / 2
+        yellowColor.layer.cornerRadius = yellowColor.frame.width / 2
+        greenColor.layer.cornerRadius = greenColor.frame.width / 2
+        
+        colorChangeButton.layer.cornerRadius = colorChangeButton.frame.width / 4
+        colorChangeButton.layer.borderWidth = 1.2
+        colorChangeButton.layer.borderColor = UIColor.systemBlue.cgColor
+        colorChangeButton.clipsToBounds = true
     }
 
-    @IBAction func actionButtomPressed() {
-        actionButton.setTitle("NEXT", for: .normal)
-        if redColor.alpha < 1 && yellowColor.alpha < 1 {
-            redColor.alpha = 1
-            greenColor.alpha = 0.3
-        } else if yellowColor.alpha < 1 && greenColor.alpha < 1 {
-            yellowColor.alpha = 1
-            redColor.alpha = 0.3
-        } else if greenColor.alpha < 1 && redColor.alpha < 1 {
-            greenColor.alpha = 1
-            yellowColor.alpha = 0.3
+    @IBAction func trafficLightColorChange() {
+        colorChangeButton.setTitle("NEXT", for: .normal)
+        
+        switch currentColor {
+        case .red:
+            greenColor.alpha = lightOff
+            redColor.alpha = lightOn
+            currentColor = .yellow
+        case .yellow:
+            redColor.alpha = lightOff
+            yellowColor.alpha = lightOn
+            currentColor = .green
+        case .green:
+            yellowColor.alpha = lightOff
+            greenColor.alpha = lightOn
+            currentColor = .red
+        default:
+            redColor.alpha = lightOn
+            currentColor = .yellow
         }
-
+        
     }
     
 }
