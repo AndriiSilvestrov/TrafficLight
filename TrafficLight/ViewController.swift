@@ -31,20 +31,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redColor.layer.cornerRadius = redColor.frame.width / 2
         redColor.alpha = lightOff
-        
-        yellowColor.layer.cornerRadius = yellowColor.frame.width / 2
         yellowColor.alpha = lightOff
-        
-        greenColor.layer.cornerRadius = greenColor.frame.width / 2
         greenColor.alpha = lightOff
+                
+    }
+    
+    override func viewWillLayoutSubviews() {
+        redColor.layer.cornerRadius = redColor.frame.width / 2
+        yellowColor.layer.cornerRadius = yellowColor.frame.width / 2
+        greenColor.layer.cornerRadius = greenColor.frame.width / 2
         
         colorChangeButton.layer.cornerRadius = colorChangeButton.frame.width / 4
         colorChangeButton.layer.borderWidth = 1.2
         colorChangeButton.layer.borderColor = UIColor.systemBlue.cgColor
         colorChangeButton.clipsToBounds = true
-        
     }
 
     @IBAction func trafficLightColorChange() {
