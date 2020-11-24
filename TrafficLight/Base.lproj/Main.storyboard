@@ -45,6 +45,9 @@
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="trafficLightColorChange" destination="BYZ-38-t0r" eventType="touchUpInside" id="uaB-IS-go7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -64,6 +67,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="colorChangeButton" destination="bhy-AY-fXI" id="tgZ-tS-sAJ"/>
+                        <outlet property="greenColor" destination="Km6-hC-bX9" id="aAE-O4-U0C"/>
+                        <outlet property="redColor" destination="tcy-hC-DTd" id="sPy-Oq-ETW"/>
+                        <outlet property="yellowColor" destination="QMJ-X0-T02" id="Cm6-lQ-IeA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
